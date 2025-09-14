@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaCartPlus, FaBolt } from "react-icons/fa";
 
-const Details = () => {
+const Product = () => {
   const { id } = useParams();
 
   // Mock product (replace with API later)
@@ -111,4 +111,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Product;

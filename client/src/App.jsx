@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
-import Details from "./pages/Details";
+import Product from "./pages/Product";
 import Navbar from "./components/Navbar";
 
 const AppLayout = () => {
@@ -14,7 +14,7 @@ const AppLayout = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
     </div>
   );
