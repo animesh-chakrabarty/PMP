@@ -36,7 +36,7 @@ const LatestModels = () => {
       <div className="latest-models-grid">
         {latestModels?.map((model) => (
           <div className="model-card" key={model.id}>
-            <Link to={`/product/${model.id}`}>
+            <Link to={`/product/${model.documentId}`}>
               <img
                 src={`http://localhost:1337${model?.thumbnail?.url}`}
                 alt={model.title}
@@ -61,7 +61,7 @@ const LatestModels = () => {
         <div className="latest-models-grid">
           {bestSales?.map((model) => (
             <div className="model-card" key={model.id}>
-              <Link to={`/product/${model.id}`}>
+              <Link to={`/product/${model.documentId}`}>
                 <img
                   src={`http://localhost:1337${model?.thumbnail?.url}`}
                   alt={model.title}
