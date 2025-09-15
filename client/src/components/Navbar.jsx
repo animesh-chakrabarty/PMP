@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleLoginClick = () => {
+    navigate('/sign-up')
+  }
+
   return (
     <nav className="w-full bg-gradient-to-r from-red-600 via-red-500 to-orange-400 text-white shadow-lg py-6 px-12 flex items-center justify-between sticky top-0 z-50">
       {/* Left - Logo */}
@@ -23,7 +29,7 @@ const Navbar = () => {
 
       {/* Right - Button */}
       <div>
-        <button className="bg-yellow-400 text-black text-lg font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-yellow-300 transition">
+        <button className="bg-yellow-400 text-black text-lg font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-yellow-300 transition" onClick={handleLoginClick}>
           Login
         </button>
       </div>

@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import SignUp from "./pages/SignUp";
+import OtpVerification from "./pages/OtpVerification"
 import Navbar from "./components/Navbar";
 
 const AppLayout = () => {
@@ -15,6 +17,8 @@ const AppLayout = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/verify-otp" element={<OtpVerification />} />
       </Routes>
     </div>
   );
