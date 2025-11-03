@@ -384,15 +384,15 @@ export interface ApiOtpOtp extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    code_hash: Schema.Attribute.String;
+    code: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    expires_at: Schema.Attribute.DateTime;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    expiresAt: Schema.Attribute.DateTime & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::otp.otp'> &
       Schema.Attribute.Private;
-    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
