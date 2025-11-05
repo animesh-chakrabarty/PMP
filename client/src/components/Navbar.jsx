@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 const Navbar = () => {
   const navigate = useNavigate();
   const handleLoginClick = () => {
-    navigate('/sign-up')
+    navigate('/signup')
   }
 
   return (
