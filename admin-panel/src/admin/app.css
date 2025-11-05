@@ -1,0 +1,37 @@
+/* Admin panel custom styles */
+:root {
+  --main-color: #2563eb;
+  --secondary-color: #1d4ed8;
+}
+
+/* Login page background */
+body {
+  background-color: #f3f4f6 !important;
+}
+
+/* Custom login container */
+div[class*="AuthPage"] {
+  background-image: linear-gradient(45deg, #2563eb22, #1d4ed822);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Hide Strapi powered by text */
+div[class*="PoweredBy"] {
+  display: none !important;
+}
+
+/* Customize the admin panel header */
+div[class*="HeaderLayout"] {
+  background: var(--main-color);
+}
+
+/* Main navigation styling */
+div[class*="NavBrand"] {
+  background-color: var(--secondary-color);
+}
+
+/* Hide tutorial button */
+div[class*="Onboarding"] {
+  display: none !important;
+}
